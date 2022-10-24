@@ -1,0 +1,73 @@
+.steps {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+}
+
+.steps__mainAside {
+  display: grid;
+  place-items: center;
+}
+
+.steps__main {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  max-width: 600px;
+}
+
+.steps__mainFooter {
+  width: 100%;
+}
+
+.aside__mainBody {
+  padding: 1rem;
+  max-width: 370px !important;
+}
+
+.steps__mainBodyTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #403f4c;
+  margin-bottom: 1rem;
+  line-height: 3.2rem;
+}
+
+.steps__mainBodySubtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+  color: #403f4c;
+  margin-bottom: 1rem;
+}
+
+.steps__mainBodyStepsStep {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.steps__mainBodyStepsStepNumber {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #3185fc;
+}
+
+.steps__mainBodyStepsStepContent {
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+.steps__mainBodyStepsStepContent h3 {
+  font-weight: 300;
+  font-size: 1.8rem;
+}

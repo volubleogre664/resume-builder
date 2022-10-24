@@ -1,40 +1,49 @@
-import { useStore } from "../context/getStore";
-import { useForm } from "../utils/useForm";
+// import { useStore } from "../context/getStore";
+// import { useForm } from "../utils/useForm";
+import MakerSteps from "../components/MakerSteps";
+import heroImage from "../assets/heroImage.png";
+
+import "../styles/pages/Home.css";
 
 function Home() {
-  const [state, dispatch] = useStore();
-  const { values, onChange, onSubmit } = useForm(
-    { name: "", password: "" },
-    updateState
-  );
+  //   const [state, dispatch] = useStore();
+  //   const { values, onChange, onSubmit } = useForm(
+  //     { name: "", password: "" },
+  //     updateState
+  //   );
 
-  function updateState() {
-    dispatch({
-      type: "SET_STATE",
-      payload: {
-        name: values.name,
-      },
-    });
-  }
+  //   function updateState() {
+  //     dispatch({
+  //       type: "SET_STATE",
+  //       payload: {
+  //         name: values.name,
+  //       },
+  //     });
+  //   }
 
   return (
     <div className="home">
-      <h2>Your free resume builder</h2>
+      <main className="home__hero">
+        <aside>
+          <h1 className="home__heroTitle">
+            Build your ultimate resume today free of charge
+          </h1>
+          <p className="home__heroSubtitle">
+            Create your resume in minutes with our easy to use resume builder
+            and sweep the recruiters off their feet.
+          </p>
 
-      <div>
-        <input
-          type="text"
-          name="name"
-          onChange={onChange}
-          value={values.name}
-        />
+          <div className="home__heroCTA">
+            <button>Get Started</button>
+          </div>
+        </aside>
 
-        <button onClick={onSubmit}>update user name</button>
-      </div>
+        <div className="home__heroImage">
+          <img src={heroImage} alt="resume illustration" />
+        </div>
+      </main>
 
-      <div>
-        <p>{state.name}</p>
-      </div>
+      <MakerSteps />
     </div>
   );
 }

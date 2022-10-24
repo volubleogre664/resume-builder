@@ -1,0 +1,76 @@
+.home {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+
+.home__hero {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 3rem 5rem;
+}
+
+.home__hero aside {
+  flex: 0.8;
+}
+
+.home__heroTitle {
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 7.15rem;
+  color: #5699f7;
+  text-shadow: -1px 1px 0 #403f4c, 1px 1px 0 #c63d2b, 1px -1px 0 #42afac,
+    -1px -1px 0 #c6c23f;
+}
+
+.home__heroSubtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #403f4c;
+  margin-top: 3rem;
+}
+
+.home__heroCTA {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.home__heroCTA button {
+  all: unset;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  background-color: #403f4c;
+  width: 60%;
+  font-size: large;
+  font-weight: 600;
+  color: #f3e0e9;
+  margin: auto;
+  text-align: center;
+  border-radius: 1.4rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.home__heroCTA button:hover {
+  transition: all ease-in-out 0.2s;
+  background-color: #3185fc;
+  color: #282831;
+}
+
+.home__heroImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.home__heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+}
