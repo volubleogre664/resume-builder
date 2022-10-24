@@ -38,7 +38,7 @@ const useForm = (initialState = {}, callback) => {
     reset();
   };
 
-  return [values, onChange, onSubmit, reset];
+  return { values, onChange, onSubmit, reset };
 };
 
-export default useForm;
+export { useForm };

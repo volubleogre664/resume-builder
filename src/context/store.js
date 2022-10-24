@@ -4,6 +4,10 @@ import types from "./types";
 
 const initialState = {
   name: "John Doe",
+  personalInformation: {},
+  education: {},
+  experience: {},
+  skills: {},
 };
 
 const store = createContext(initialState);
