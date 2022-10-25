@@ -1,25 +1,11 @@
-// import { useStore } from "../context/getStore";
-// import { useForm } from "../utils/useForm";
+import { useState } from "react";
 import MakerSteps from "../components/MakerSteps";
 import heroImage from "../assets/heroImage.png";
 
 import "../styles/pages/Home.css";
 
 function Home() {
-  //   const [state, dispatch] = useStore();
-  //   const { values, onChange, onSubmit } = useForm(
-  //     { name: "", password: "" },
-  //     updateState
-  //   );
-
-  //   function updateState() {
-  //     dispatch({
-  //       type: "SET_STATE",
-  //       payload: {
-  //         name: values.name,
-  //       },
-  //     });
-  //   }
+  const [popup, setPopup] = useState(false);
 
   return (
     <div className="home">
@@ -34,7 +20,7 @@ function Home() {
           </p>
 
           <div className="home__heroCTA">
-            <button>Get Started</button>
+            <button onClick={() => setPopup(!popup)}>Get Started</button>
           </div>
         </aside>
 
@@ -43,7 +29,7 @@ function Home() {
         </div>
       </main>
 
-      <MakerSteps />
+      {popup && <MakerSteps setPopup={setPopup} />}
     </div>
   );
 }

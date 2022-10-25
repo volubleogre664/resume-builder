@@ -2,7 +2,9 @@ import stepsImage from "../assets/steps.png";
 
 import "../styles/components/MakerSteps.css";
 
-function MakerSteps() {
+function MakerSteps({ setPopup }) {
+  const cancelClicked = () => setPopup(false);
+
   return (
     <div className="steps">
       <div className="steps__main">
@@ -114,6 +116,13 @@ function MakerSteps() {
                   for them to reach you
                 </small> */}
               </div>
+            </div>
+
+            <div className="steps__mainBodyStepsStep">
+              <button className="btn-continue">Let's go</button>
+              <button onClick={cancelClicked} className="btn-cancel">
+                Cancel
+              </button>
             </div>
           </div>
         </main>
